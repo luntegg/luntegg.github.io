@@ -261,6 +261,10 @@ body {
     color: #c1c1ae;
 }
 
+.story-wrapper hr {
+    display: none;
+}
+
 .links {
     margin-bottom: 100px;
 }
@@ -378,6 +382,7 @@ body {
 
     .story-wrapper hr {
         border-color: #fff;
+        display: block;
         margin-bottom: 70px;
         opacity: 0.1;
     }
