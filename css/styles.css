@@ -206,12 +206,24 @@ body {
 }
 
 .logo {
-    background: center no-repeat url(../img/logo.svg);
+    background: center no-repeat url(../img/logo@1x.png);
     display: inline-block;
     height: 45px;
     margin-bottom: 48px;
     margin-top: 64px;
     width: 106px;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2) {
+    .logo {
+        background: center no-repeat url(../img/logo@2x.png);
+    }
+}
+
+@media (-webkit-min-device-pixel-ratio: 3) {
+    .logo {
+        background: center no-repeat url(../img/logo@3x.png);
+    }
 }
 
 .other-story {
