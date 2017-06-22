@@ -207,7 +207,7 @@ body {
 
 .logo {
     background: center no-repeat url(../img/logo@1x.png);
-    background-size: cover;
+    background-size: cover !important;
     display: inline-block;
     height: 46px;
     margin-bottom: 48px;
