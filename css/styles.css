@@ -41,6 +41,7 @@ a:hover {
 }
 
 input {
+    border-radius: 0;
     outline: 0;
 }
 
