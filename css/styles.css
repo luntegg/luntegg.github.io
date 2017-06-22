@@ -91,8 +91,8 @@ input:-ms-input-placeholder      {color:#ccccbc;}
 }
 
 body {
-    background: url(../img/grain@1x.png);
-    //background: url(../img/grain_s.png), -webkit-gradient(linear, left top, left bottom, from(#353531), to(#0A0A0A)) fixed;
+    background-size: 120px;
+    background: url(../img/grain@1x.png), -webkit-gradient(linear, left top, left bottom, from(#353531), to(#0A0A0A)) fixed;
     background-blend-mode: overlay;
     font-family: 'Roboto Condensed';
     font-size: 15px;
@@ -101,13 +101,13 @@ body {
 
 @media (-webkit-min-device-pixel-ratio: 2) {
     body {
-        background: url(../img/grain@2x.png);
+        background: url(../img/grain@2x.png), -webkit-gradient(linear, left top, left bottom, from(#353531), to(#0A0A0A)) fixed;
     }
 }
 
 @media (-webkit-min-device-pixel-ratio: 3) {
     body {
-        background: url(../img/grain@3x.png);
+        background: url(../img/grain@3x.png), -webkit-gradient(linear, left top, left bottom, from(#353531), to(#0A0A0A)) fixed;
     }
 }
 
@@ -207,11 +207,12 @@ body {
 
 .logo {
     background: center no-repeat url(../img/logo@1x.png);
+    background-size: cover;
     display: inline-block;
-    height: 45px;
+    height: 46px;
     margin-bottom: 48px;
     margin-top: 64px;
-    width: 106px;
+    width: 108px;
 }
 
 @media (-webkit-min-device-pixel-ratio: 2) {
