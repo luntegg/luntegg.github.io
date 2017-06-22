@@ -1,5 +1,5 @@
 var releaseDate = new Date('07/01/2017 01:00 AM');
-var stories = [1, 3, 4];
+var stories = [1, 2, 3, 4, 5, 6, 7, 8];
 
 var _second = 1000;
 var _minute = _second * 60;
