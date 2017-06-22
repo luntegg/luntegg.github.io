@@ -47,13 +47,20 @@ $(function() {
             e.preventDefault();
 
             var email = $('#email').val();
+            var elem = $(this);
 
-            if ($(this).hasClass('active') || !email || !$('#email').is(':valid')) {
-                $(this).siblings('input').shake();
+            if (elem.hasClass('active') || !email || !$('#email').is(':valid')) {
+                elem.siblings('input').addClass('shake');
+                elem.addClass('shake');
+
+                setTimeout(function () {
+                    elem.siblings('input').removeClass('shake');
+                    elem.removeClass('shake');
+                }, 800);
+
                 return false;
             }
 
-            var elem = $(this);
             elem.addClass('active').text('Загрузка');
 
             saveEmail(email, function () {
@@ -66,13 +73,18 @@ $(function() {
             e.preventDefault();
 
             var email = $('#email').val();
+            var elem = $(this);
 
-            if ($(this).hasClass('active') || !email || !$('#email').is(':valid')) {
-                $(this).siblings('input').shake();
+            if (elem.hasClass('active') || !email || !$('#email').is(':valid')) {
+                elem.siblings('input').addClass('shake');
+
+                setTimeout(function () {
+                    elem.siblings('input').removeClass('shake');
+                }, 800);
+
                 return false;
             }
 
-            var elem = $(this);
             var text = elem.find('span');
             text.addClass('active').text('Загрузка');
             elem.siblings('input').prop('disabled', true);
@@ -120,34 +132,3 @@ $(function() {
     loadStory(storyNum);
     startCountDown();
 });
-
-(function ($) {
-    $.fn.shake = function (options) {
-        // defaults
-        var settings = {
-            'shakes': 2,
-            'distance': 5,
-            'duration': 300
-        };
-        // merge options
-        if (options) {
-            $.extend(settings, options);
-        }
-        // make it so
-        var pos;
-        return this.each(function () {
-            $this = $(this);
-            // position if necessary
-            pos = $this.css('position');
-            if (!pos || pos === 'static') {
-                $this.css('position', 'relative');
-            }
-            // shake it
-            for (var x = 1; x <= settings.shakes; x++) {
-                $this.animate({ left: settings.distance * -1 }, (settings.duration / settings.shakes) / 4)
-                    .animate({ left: settings.distance }, (settings.duration / settings.shakes) / 2)
-                    .animate({ left: 0 }, (settings.duration / settings.shakes) / 4);
-            }
-        });
-    };
-}(jQuery));
