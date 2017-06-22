@@ -40,18 +40,6 @@ $(function() {
                 callback();
             }, 1000);
         // });
-
-        // $.ajax({
-        //     type: 'POST',
-        //     url: 'api',
-        //     data: {
-        //         action: 'save_email',
-        //         email: email
-        //     },
-        //     success: function (data) {
-        //         console.log('save success');
-        //     }
-        // });
     };
 
     var bindElements = function() {
@@ -59,7 +47,6 @@ $(function() {
             e.preventDefault();
 
             var email = $('#email').val();
-            console.log('email – ', email);
 
             if ($(this).hasClass('active') || !email || !$('#email').is(':valid')) {
                 $(this).siblings('input').shake();
@@ -67,7 +54,7 @@ $(function() {
             }
 
             var elem = $(this);
-            elem.addClass('active').text('Загрузка...');
+            elem.addClass('active').text('Загрузка');
 
             saveEmail(email, function () {
                 elem.parent('.email').hide();
@@ -79,7 +66,6 @@ $(function() {
             e.preventDefault();
 
             var email = $('#email').val();
-            console.log('email – ', email);
 
             if ($(this).hasClass('active') || !email || !$('#email').is(':valid')) {
                 $(this).siblings('input').shake();
@@ -87,7 +73,8 @@ $(function() {
             }
 
             var elem = $(this);
-            elem.addClass('active').text('Загрузка...');
+            var text = elem.find('span');
+            text.addClass('active').text('Загрузка');
             elem.siblings('input').prop('disabled', true);
 
             saveEmail(email, function () {
@@ -127,7 +114,6 @@ $(function() {
     };
 
     var storyNum = getRandomFromArray();
-    console.log('curr story – ', storyNum);
 
     bindElements();
     hideExtraButtons();

@@ -4,17 +4,79 @@
     src: url(../fonts/RobotoCondensed-Regular.ttf);
 }
 
-@-moz-keyframes countdown-color {
+@keyframes countdown-color {
     0%   {color: #8A8A80;}
     50%  {color: #3F3F3D;}
     100% {color: #8A8A80;}
 }
 
-@-webkit-keyframes countdown-color {
-    0%   {color: #8A8A80;}
-    50%  {color: #3F3F3D;}
-    100% {color: #8A8A80;}
+@keyframes dots {
+    0%, 20% {
+        color: rgba(0,0,0,0);
+        text-shadow:
+                .25em 0 0 rgba(0,0,0,0),
+                .5em 0 0 rgba(0,0,0,0);
+    }
+
+    40% {
+        color: #808063;
+        text-shadow:
+                .25em 0 0 rgba(0,0,0,0),
+                .5em 0 0 rgba(0,0,0,0);
+    }
+
+    60% {
+        text-shadow:
+                .25em 0 0 #808063,
+                .5em 0 0 rgba(0,0,0,0);
+    }
+
+    80%, 100% {
+        text-shadow:
+                .25em 0 0 #808063,
+                .5em 0 0 #808063;
+    }
 }
+
+@keyframes dots-mobile {
+    0%, 20% {
+        color: rgba(0,0,0,0);
+        text-shadow:
+                .25em 0 0 rgba(0,0,0,0),
+                .5em 0 0 rgba(0,0,0,0);
+    }
+
+    40% {
+        color: #ccccbc;
+        text-shadow:
+                .25em 0 0 rgba(0,0,0,0),
+                .5em 0 0 rgba(0,0,0,0);
+    }
+
+    60% {
+        text-shadow:
+                .25em 0 0 #ccccbc,
+                .5em 0 0 rgba(0,0,0,0);
+    }
+
+    80%, 100% {
+        text-shadow:
+                .25em 0 0 #ccccbc,
+                .5em 0 0 #ccccbc;
+    }
+}
+
+/*@-moz-keyframes countdown-color {*/
+    /*0%   {color: #8A8A80;}*/
+    /*50%  {color: #3F3F3D;}*/
+    /*100% {color: #8A8A80;}*/
+/*}*/
+
+/*@-webkit-keyframes countdown-color {*/
+    /*0%   {color: #8A8A80;}*/
+    /*50%  {color: #3F3F3D;}*/
+    /*100% {color: #8A8A80;}*/
+/*}*/
 
 * {
     box-sizing: border-box;
@@ -180,6 +242,16 @@ body {
     text-decoration: none;
     text-transform: uppercase;
     top: 13px;
+}
+
+.email .submit.active:after {
+    content: '.';
+    animation: dots 1s steps(5, end) infinite;
+}
+
+.email .submit-mobile .active:after {
+    content: '.';
+    animation: dots-mobile 1s steps(5, end) infinite;
 }
 
 .email .submit.active:hover {
