@@ -76,10 +76,10 @@ input {
     border-radius: 4px;
 }
 
-input::-webkit-input-placeholder {color:#ccccbc;}
-input::-moz-placeholder          {color:#ccccbc;}
-input:-moz-placeholder           {color:#ccccbc;}
-input:-ms-input-placeholder      {color:#ccccbc;}
+input::-webkit-input-placeholder {color:#ccccbc; opacity: 0.4;}
+input::-moz-placeholder          {color:#ccccbc; opacity: 0.4;}
+input:-moz-placeholder           {color:#ccccbc; opacity: 0.4;}
+input:-ms-input-placeholder      {color:#ccccbc; opacity: 0.4;}
 
 .container {
     background-attachment: fixed;
@@ -164,7 +164,6 @@ body {
     font-family: 'Roboto Condensed';
     font-size: 15px;
     height: 40px;
-    line-height: 15px;
     padding-bottom: 2px;
     padding-left: 15px;
     padding-right: 170px;
