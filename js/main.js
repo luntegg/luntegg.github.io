@@ -76,8 +76,9 @@ $(function() {
             elem.addClass('active').text('Загрузка');
 
             saveEmail(email, function () {
-                elem.parent('.email').hide();
-                elem.parent('.email').siblings('.email-finish').fadeIn();
+                elem.hide();
+                elem.siblings('#email').hide();
+                elem.parent('.email').find('.email-finish').fadeIn();
             });
         });
 
@@ -104,7 +105,7 @@ $(function() {
             saveEmail(email, function () {
                 setTimeout(function () {
                     elem.hide();
-                    elem.parent('.email').siblings('.email-finish').fadeIn();
+                    elem.parent('.email').find('.email-finish').fadeIn();
                 }, 2000);
             });
         });
