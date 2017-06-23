@@ -165,8 +165,8 @@ input:-ms-input-placeholder      {color:#ccccbc; opacity: 0.4;}
 }
 
 body {
-    background-size: 120px;
     background: url(../img/grain@1x.png), -webkit-gradient(linear, left top, left bottom, from(#353531), to(#0A0A0A)) fixed;
+    background-attachment: fixed;
     background-blend-mode: overlay;
     font-family: 'Roboto Condensed';
     font-size: 15px;
