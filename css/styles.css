@@ -165,7 +165,8 @@ input:-ms-input-placeholder      {color:#ccccbc; opacity: 0.4;}
 }
 
 body {
-    background: url(../img/grain@1x.png), -webkit-gradient(linear, left top, left bottom, from(#353531), to(#0A0A0A)) fixed;
+    /*background: url(../img/grain@1x.png), -webkit-gradient(linear, left top, left bottom, from(#353531), to(#0A0A0A)) fixed;*/
+    background-image: url(../img/bg@1x.jpg);
     background-attachment: fixed;
     background-blend-mode: overlay;
     font-family: 'Roboto Condensed';
@@ -175,15 +176,16 @@ body {
 
 @media (-webkit-min-device-pixel-ratio: 2) {
     body {
-        background: url(../img/grain@2x.png), -webkit-gradient(linear, left top, left bottom, from(#353531), to(#0A0A0A)) fixed;
+        /*background: url(../img/grain@2x.png), -webkit-gradient(linear, left top, left bottom, from(#353531), to(#0A0A0A)) fixed;*/
+        background-image: url(../img/bg@2x.jpg);
     }
 }
 
-@media (-webkit-min-device-pixel-ratio: 3) {
-    body {
-        background: url(../img/grain@3x.png), -webkit-gradient(linear, left top, left bottom, from(#353531), to(#0A0A0A)) fixed;
-    }
-}
+/*@media (-webkit-min-device-pixel-ratio: 3) {*/
+    /*body {*/
+        /*background: url(../img/grain@3x.png), -webkit-gradient(linear, left top, left bottom, from(#353531), to(#0A0A0A)) fixed;*/
+    /*}*/
+/*}*/
 
 .bg-wrapper {
     background-size: cover;
@@ -343,7 +345,7 @@ body {
 }
 
 .story-desc {
-    color: #4C4C48;
+    color: #8a8a80;
     margin-bottom: 25px;
 }
 
