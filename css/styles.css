@@ -391,6 +391,10 @@ body {
 }
 
 @media (max-width: 500px) {
+    body {
+        background: none !important;
+    }
+
     .container {
         background-attachment: fixed;
         height: 100%;
