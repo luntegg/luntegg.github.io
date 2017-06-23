@@ -29,7 +29,7 @@ $(function() {
     };
 
     var ratio = parseInt(window.devicePixelRatio) || 1;
-
+    alert(ratio);
     var loadStory = function (number) {
         $.get('./text/' + number + '-story.txt', function(data) {
             data = data.replace(/\n/g, "<br>");
