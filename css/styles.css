@@ -205,7 +205,7 @@ body {
 }
 
 @media (-webkit-min-device-pixel-ratio: 2) {
-    body {
+    .bg-wrapper {
         background: url(../img/bg/story-bg@2x.svg);
     }
 
