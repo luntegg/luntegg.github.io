@@ -178,7 +178,7 @@ body {
     margin-bottom: 100px;
     margin-top: 120px;
 
-    transition: background 2.5s linear;
+    transition: background 2s linear;
     transition-delay: 0.3s;
 }
 
@@ -191,7 +191,7 @@ body {
     max-width: 620px;
     text-align: center;
 
-    transition: background 2.5s linear;
+    transition: background 2s linear;
     transition-delay: 0.3s;
 }
 
