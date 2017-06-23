@@ -28,11 +28,13 @@ $(function() {
         }
     };
 
+    var ratio = parseInt(window.devicePixelRatio) || 1;
+
     var loadStory = function (number) {
         $.get('./text/' + number + '-story.txt', function(data) {
             data = data.replace(/\n/g, "<br>");
 
-            $('.bg-wrapper, .container').css('background-image', 'url(./img/bg/' + number + '-bg.jpg)');
+            $('.bg-wrapper, .container').css('background-image', 'url(./img/bg/' + number + '-bg@' + ratio + 'x.jpg)');
             $('#story').html(data);
         }, 'text');
     };
