@@ -165,15 +165,6 @@ body {
     line-height: 21px;
 }
 
-@media (-webkit-min-device-pixel-ratio: 2) {
-    body {
-        /*background: url(../img/grain@2x.png), -webkit-gradient(linear, left top, left bottom, from(#353531), to(#0A0A0A)) fixed;*/
-        background: center url(../img/bg@2x.jpg);
-        background-attachment: fixed;
-        background-size: cover;
-    }
-}
-
 /*@media (-webkit-min-device-pixel-ratio: 3) {*/
     /*body {*/
         /*background: url(../img/grain@3x.png), -webkit-gradient(linear, left top, left bottom, from(#353531), to(#0A0A0A)) fixed;*/
@@ -205,12 +196,21 @@ body {
 }
 
 @media (-webkit-min-device-pixel-ratio: 2) {
+    body {
+        /*background: url(../img/grain@2x.png), -webkit-gradient(linear, left top, left bottom, from(#353531), to(#0A0A0A)) fixed;*/
+        background: center url(../img/bg@2x.jpg);
+        background-attachment: fixed;
+        background-size: cover;
+    }
+
     .bg-wrapper {
         background-image: url(../img/bg/story-bg@2x.svg);
+        background-size: cover;
     }
 
     .container {
         background-image: url(../img/bg/story-bg@2x.svg);
+        background-size: cover;
     }
 }
 
