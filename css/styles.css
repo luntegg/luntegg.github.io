@@ -402,7 +402,6 @@ body {
 @media (max-width: 500px) {
     body {
         background: none !important;
-        background: pink !important;
     }
 
     .android-download, .ios-download {
