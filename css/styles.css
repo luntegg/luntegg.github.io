@@ -202,16 +202,6 @@ body {
         background-attachment: fixed;
         background-size: cover;
     }
-
-    /*.bg-wrapper {*/
-        /*background-image: url(../img/bg/story-bg@2x.svg);*/
-        /*background-size: cover;*/
-    /*}*/
-
-    /*.container {*/
-        /*background-image: url(../img/bg/story-bg@2x.svg);*/
-        /*background-size: cover;*/
-    /*}*/
 }
 
 .countdown {
@@ -401,7 +391,7 @@ body {
 
 @media (max-width: 500px) {
     body {
-        background: none !important;
+        background: #2B2B29 !important;
     }
 
     .android-download, .ios-download {
