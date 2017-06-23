@@ -168,6 +168,7 @@ body {
     /*background: url(../img/grain@1x.png), -webkit-gradient(linear, left top, left bottom, from(#353531), to(#0A0A0A)) fixed;*/
     background: center url(../img/bg@1x.jpg);
     background-attachment: fixed;
+    background-size: cover;
     font-family: 'Roboto Condensed';
     font-size: 15px;
     line-height: 21px;
@@ -178,6 +179,7 @@ body {
         /*background: url(../img/grain@2x.png), -webkit-gradient(linear, left top, left bottom, from(#353531), to(#0A0A0A)) fixed;*/
         background: center url(../img/bg@2x.jpg);
         background-attachment: fixed;
+        background-size: cover;
     }
 }
 
