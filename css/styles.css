@@ -181,7 +181,7 @@ body {
 /*}*/
 
 .bg-wrapper {
-    background: url(../img/bg/story-bg@1x.svg);
+    background-image: url(../img/bg/story-bg@1x.svg);
     background-size: cover;
     box-shadow: 0 30px 100px 0 rgba(0,0,0,0.50);
     margin-bottom: 100px;
@@ -192,7 +192,7 @@ body {
 }
 
 .container {
-    background: url(../img/bg/story-bg@1x.svg);
+    background-image: url(../img/bg/story-bg@1x.svg);
     background-attachment: fixed;
     background-size: cover;
     margin-right: auto;
@@ -206,11 +206,11 @@ body {
 
 @media (-webkit-min-device-pixel-ratio: 2) {
     .bg-wrapper {
-        background: url(../img/bg/story-bg@2x.svg);
+        background-image: url(../img/bg/story-bg@2x.svg);
     }
 
     .container {
-        background: url(../img/bg/story-bg@2x.svg);
+        background-image: url(../img/bg/story-bg@2x.svg);
     }
 }
 
