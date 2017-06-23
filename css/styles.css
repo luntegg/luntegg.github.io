@@ -416,6 +416,8 @@ body {
         background-image: none !important;
         box-shadow: none;
         margin: 0;
+
+        background: yellow;
     }
 
     .countdown {
