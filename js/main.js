@@ -8,6 +8,16 @@ var _day = _hour * 24;
 var timer;
 
 $(function() {
+    var isRelease = (location.search == '?release');
+
+    if (isRelease) {
+        $('body').addClass('release-mode');
+
+        $('.countdown').remove();
+    } else {
+        $('body').addClass('timer-mode');
+    }
+
     var hideExtraButtons = function () {
         if (!navigator.userAgent.toLowerCase().match(/(ipod|iphone|ipad)/)) {
             $('.ios-download').hide();
