@@ -181,7 +181,7 @@ body {
 /*}*/
 
 .bg-wrapper {
-    background: url(../img/bg/story-bg.svg);
+    background: url(../img/bg/story-bg@1x.svg);
     background-size: cover;
     box-shadow: 0 30px 100px 0 rgba(0,0,0,0.50);
     margin-bottom: 100px;
@@ -192,6 +192,7 @@ body {
 }
 
 .container {
+    background: url(../img/bg/story-bg@1x.svg);
     background-attachment: fixed;
     background-size: cover;
     margin-right: auto;
@@ -201,6 +202,16 @@ body {
 
     transition: background 2.5s linear;
     transition-delay: 0.3s;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2) {
+    body {
+        background: url(../img/bg/story-bg@2x.svg);
+    }
+
+    .container {
+        background: url(../img/bg/story-bg@2x.svg);
+    }
 }
 
 .countdown {
@@ -408,8 +419,6 @@ body {
     }
 
     .container {
-        background: url(../img/bg/story-bg.svg);
-
         background-attachment: fixed;
         background-size: cover;
         height: 100%;
