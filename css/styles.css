@@ -192,8 +192,6 @@ body {
 }
 
 .container {
-    background: url(../img/bg/story-bg.svg);
-
     background-attachment: fixed;
     background-size: cover;
     margin-right: auto;
@@ -396,16 +394,6 @@ body {
         background: pink !important;
     }
 
-    .container {
-        background-attachment: fixed;
-        background-size: cover;
-        height: 100%;
-        max-height: 100%;
-        max-width: 100%;
-        padding: 0;
-        overflow-y: scroll;
-    }
-
     .android-download, .ios-download {
         display: inline-block;
         float: right;
@@ -417,6 +405,18 @@ body {
         background: none !important;
         box-shadow: none;
         margin: 0;
+    }
+
+    .container {
+        background: url(../img/bg/story-bg.svg);
+
+        background-attachment: fixed;
+        background-size: cover;
+        height: 100%;
+        max-height: 100%;
+        max-width: 100%;
+        padding: 0;
+        overflow-y: scroll;
     }
 
     .countdown {
