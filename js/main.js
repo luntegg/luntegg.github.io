@@ -38,7 +38,7 @@ $(function() {
         // }, 'json').done(function() {
             setTimeout(function(data) {
                 callback();
-            }, 1000);
+            }, 500);
         // });
     };
 
