@@ -187,23 +187,22 @@ body {
     margin-bottom: 100px;
     margin-top: 120px;
 
-    transition: background 2s linear;
-    transition-delay: 0.2s;
+    transition: background 2.5s linear;
+    transition-delay: 0.3s;
 }
 
 .container {
-    background: center url(../img/bg@1x.jpg);
+    background: url(../img/bg/story-bg.svg);
 
     background-attachment: fixed;
-    background-image: none;
     background-size: cover;
     margin-right: auto;
     margin-left: auto;
     max-width: 620px;
     text-align: center;
 
-    transition: background 2s linear;
-    transition-delay: 2.5s;
+    transition: background 2.5s linear;
+    transition-delay: 0.3s;
 }
 
 .countdown {
