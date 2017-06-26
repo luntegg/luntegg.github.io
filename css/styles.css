@@ -157,7 +157,7 @@ input:-ms-input-placeholder      {color:#ccccbc; opacity: 0.4;}
 
 body {
     /*background: url(../img/grain@1x.png), -webkit-gradient(linear, left top, left bottom, from(#353531), to(#0A0A0A)) fixed;*/
-    /*background: center url(../img/bg@1x.jpg);*/
+    background: center url(../img/bg@1x.jpg);
     background-attachment: fixed;
     background-size: cover;
     font-family: 'Roboto Condensed';
