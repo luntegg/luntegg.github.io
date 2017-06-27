@@ -275,6 +275,11 @@ body {
     padding-left: 15px;
     padding-right: 170px;
     width: 100%;
+
+    -moz-transition: all .15s ease-in;
+    -o-transition: all .15s ease-in;
+    -webkit-transition: all .15s ease-in;
+    transition: all .15s ease-in;
 }
 
 .email input:hover, .email input:active, .email input:focus {
