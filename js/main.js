@@ -35,7 +35,7 @@ $(function() {
         $.get('./text/' + number + '-story.txt', function(data) {
             data = data.replace(/\n/g, "<br>");
 
-            $('.bg-wrapper, .container').css('background-image', 'url(./img/bg/' + number + '-bg@' + ratio + 'x.jpg)');
+            $('.bg-wrapper, .container').css('background', 'center url(./img/bg/' + number + '-bg@' + ratio + 'x.jpg)');
             $('#story').html(data);
         }, 'text');
     };

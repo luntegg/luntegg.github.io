@@ -172,7 +172,7 @@ body {
 /*}*/
 
 .bg-wrapper {
-    background-image: url(../img/bg/story-bg.png);
+    background: center url(../img/bg/story-bg.png);
     background-size: cover;
     box-shadow: 0 30px 100px 0 rgba(0,0,0,0.50);
     margin-bottom: 100px;
@@ -183,7 +183,7 @@ body {
 }
 
 .container {
-    background-image: url(../img/bg/story-bg.png);
+    background: center url(../img/bg/story-bg.png);
     background-attachment: fixed;
     background-size: cover;
     margin-right: auto;
