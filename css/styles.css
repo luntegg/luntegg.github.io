@@ -191,7 +191,7 @@ body {
     background-size: cover;
     box-shadow: 0 30px 100px 0 rgba(0,0,0,0.50);
     margin-bottom: 100px;
-    margin-top: 120px;
+    margin-top: 160px;
 
     transition: background 2s linear;
     transition-delay: 0.3s;
@@ -216,7 +216,6 @@ body {
     margin-right: auto;
     margin-left: auto;
     max-width: 620px;
-    position: relative;
     text-align: center;
 
     transition: background 2s linear;
@@ -506,7 +505,11 @@ body {
     .bg-wrapper {
         background: none !important;
         box-shadow: none;
-        margin: 0;
+        margin: 0 !important;
+    }
+
+    .choose-country {
+        margin-bottom: 120px;
     }
 
     .choose-country .btn.white {

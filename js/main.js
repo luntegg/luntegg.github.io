@@ -11,6 +11,10 @@ $(function() {
     setTimeout(function() {
         $('.loading').fadeOut(function () {
             $('.content').fadeIn(800);
+
+            setTimeout(function () {
+                $('.bg-wrapper').animate({marginTop: '120px'}, 1200);
+            }, 200);
         });
     }, 500);
 
@@ -145,7 +149,7 @@ $(function() {
             } else {
                 var phone = $('#phone').val();
 
-                if (elem.hasClass('active') || !phone || phone.length < 15) {
+                if (elem.hasClass('active') || !phone) {
                     elem.siblings('input').addClass('shake');
                     elem.siblings('.seven').addClass('shake');
                     elem.addClass('shake');
@@ -201,7 +205,7 @@ $(function() {
             } else {
                 var phone = $('#phone').val();
 
-                if (elem.hasClass('active') || !phone || phone.length < 15) {
+                if (elem.hasClass('active') || !phone) {
                     elem.siblings('input').addClass('shake');
                     elem.siblings('.seven').addClass('shake');
 
