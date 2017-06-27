@@ -204,20 +204,24 @@ body {
 
     .bg-wrapper {
         background: center url(../img/bg/story-bg@2x.png);
+        background-size: cover !important;
     }
 
     .container {
         background: center url(../img/bg/story-bg@2x.png);
+        background-size: cover !important;
     }
 }
 
 @media (-webkit-min-device-pixel-ratio: 3) {
     .bg-wrapper {
         background: center url(../img/bg/story-bg@3x.png);
+        background-size: cover !important;
     }
 
     .container {
         background: center url(../img/bg/story-bg@3x.png);
+        background-size: cover !important;
     }
 }
 
