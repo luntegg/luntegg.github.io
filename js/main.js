@@ -12,9 +12,7 @@ $(function() {
         $('.loading').fadeOut(function () {
             $('.content').fadeIn(800);
 
-            setTimeout(function () {
-                $('.bg-wrapper').animate({marginTop: '120px'}, 1200);
-            }, 200);
+            $('.bg-wrapper').animate({marginTop: '120px'}, 800);
         });
     }, 600);
 
