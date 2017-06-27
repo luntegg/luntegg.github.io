@@ -55,59 +55,181 @@ $(function() {
         // });
     };
 
+    var savePhone = function (phone, callback) {
+        // $.post('api/', {
+        //     action: 'save_phone',
+        //     phone: phone
+        // }, 'json').done(function() {
+            setTimeout(function(data) {
+                callback();
+            }, 500);
+        // });
+    };
+
     var bindElements = function() {
+        $('#phone')
+            .keydown(function (e) {
+                var key = e.charCode || e.keyCode || 0;
+                $phone = $(this);
+
+                // Auto-format- do not expose the mask as the user begins to type
+                if (key !== 8 && key !== 9) {
+                    if ($phone.val().length === 4) {
+                        $phone.val($phone.val() + ')');
+                    }
+                    if ($phone.val().length === 5) {
+                        $phone.val($phone.val() + ' ');
+                    }
+                    if ($phone.val().length === 9) {
+                        $phone.val($phone.val() + '-');
+                    }
+                    if ($phone.val().length === 12) {
+                        $phone.val($phone.val() + '-');
+                    }
+                }
+
+                return (key == 91 || key == 8 || key == 9 || key == 46 || (key >= 48 && key <= 57) || (key >= 96 && key <= 105));
+            })
+            .bind('focus click', function () {
+                $phone = $(this);
+
+                if ($phone.val().length === 0) {
+                    $phone.val('(');
+                }
+                else {
+                    var val = $phone.val();
+                    $phone.val('').val(val);
+                }
+            })
+            .blur(function () {
+                $phone = $(this);
+
+                if ($phone.val() === '(') {
+                    $phone.val('');
+                }
+            });
+
         $(document).on('click', '.submit', function(e) {
             e.preventDefault();
 
-            var email = $('#email').val();
             var elem = $(this);
 
-            if (elem.hasClass('active') || !email || !$('#email').is(':valid')) {
-                elem.siblings('input').addClass('shake');
-                elem.addClass('shake');
+            if (elem.data('key') == 'email') {
+                var email = $('#email').val();
 
-                setTimeout(function () {
-                    elem.siblings('input').removeClass('shake');
-                    elem.removeClass('shake');
-                }, 800);
+                if (elem.hasClass('active') || !email || !$('#email').is(':valid')) {
+                    elem.siblings('input').addClass('shake');
+                    elem.addClass('shake');
 
-                return false;
+                    setTimeout(function () {
+                        elem.siblings('input').removeClass('shake');
+                        elem.removeClass('shake');
+                    }, 800);
+
+                    return false;
+                }
+
+                elem.addClass('active').text('Загрузка');
+
+                saveEmail(email, function () {
+                    elem.hide();
+                    elem.siblings('#email').hide();
+                    elem.parent('.email').find('.email-finish').fadeIn();
+                });
+            } else {
+                var phone = $('#phone').val();
+
+                if (elem.hasClass('active') || !phone || phone.length < 15) {
+                    elem.siblings('input').addClass('shake');
+                    elem.siblings('.seven').addClass('shake');
+                    elem.addClass('shake');
+
+                    setTimeout(function () {
+                        elem.siblings('input').removeClass('shake');
+                        elem.siblings('.seven').removeClass('shake');
+                        elem.removeClass('shake');
+                    }, 800);
+
+                    return false;
+                }
+
+                elem.addClass('active').text('Загрузка');
+
+                savePhone(phone, function () {
+                    elem.hide();
+                    elem.siblings('#phone').hide();
+                    elem.siblings('.seven').hide();
+                    elem.parent('.phone').find('.phone-finish').fadeIn();
+                });
             }
-
-            elem.addClass('active').text('Загрузка');
-
-            saveEmail(email, function () {
-                elem.hide();
-                elem.siblings('#email').hide();
-                elem.parent('.email').find('.email-finish').fadeIn();
-            });
         });
 
         $(document).on('click', '.submit-mobile', function(e) {
             e.preventDefault();
 
-            var email = $('#email').val();
             var elem = $(this);
 
-            if (elem.hasClass('active') || !email || !$('#email').is(':valid')) {
-                elem.siblings('input').addClass('shake');
+            if (elem.data('key') == 'email') {
+                var email = $('#email').val();
 
-                setTimeout(function () {
-                    elem.siblings('input').removeClass('shake');
-                }, 800);
+                if (elem.hasClass('active') || !email || !$('#email').is(':valid')) {
+                    elem.siblings('input').addClass('shake');
 
-                return false;
+                    setTimeout(function () {
+                        elem.siblings('input').removeClass('shake');
+                    }, 800);
+
+                    return false;
+                }
+
+                var text = elem.find('span');
+                text.addClass('active').text('Загрузка');
+                elem.siblings('input').prop('disabled', true);
+
+                saveEmail(email, function () {
+                    setTimeout(function () {
+                        elem.hide();
+                        elem.parent('.email').find('.email-finish').fadeIn();
+                    }, 2000);
+                });
+            } else {
+                var phone = $('#phone').val();
+
+                if (elem.hasClass('active') || !phone || phone.length < 15) {
+                    elem.siblings('input').addClass('shake');
+                    elem.siblings('.seven').addClass('shake');
+
+                    setTimeout(function () {
+                        elem.siblings('input').removeClass('shake');
+                        elem.siblings('.seven').removeClass('shake');
+                    }, 800);
+
+                    return false;
+                }
+
+                var text = elem.find('span');
+                text.addClass('active').text('Загрузка');
+                elem.siblings('input').prop('disabled', true);
+
+                savePhone(phone, function () {
+                    setTimeout(function () {
+                        elem.hide();
+                        elem.parent('.phone').find('.phone-finish').fadeIn();
+                    }, 2000);
+                });
             }
+        });
 
-            var text = elem.find('span');
-            text.addClass('active').text('Загрузка');
-            elem.siblings('input').prop('disabled', true);
+        $(document).on('click', '.btn.not-russia', function() {
+            $('.choose-country').fadeOut(function() {
+                $('.email').fadeIn();
+            });
+        });
 
-            saveEmail(email, function () {
-                setTimeout(function () {
-                    elem.hide();
-                    elem.parent('.email').find('.email-finish').fadeIn();
-                }, 2000);
+        $(document).on('click', '.btn.russia', function() {
+            $('.choose-country').fadeOut(function() {
+                $('.phone').fadeIn(function() {
+                });
             });
         });
     };

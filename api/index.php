@@ -16,6 +16,13 @@
 
             break;
 
+        case 'save_phone':
+            $phone = $_POST['phone'];
+
+            file_put_contents('phones.txt', $phone.PHP_EOL , FILE_APPEND | LOCK_EX);
+
+            break;
+
         default:
             exit;
     }

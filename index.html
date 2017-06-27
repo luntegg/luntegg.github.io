@@ -5,13 +5,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Quester</title>
 
-        <link rel="stylesheet" href="css/styles.css?29">
+        <link rel="stylesheet" href="css/styles.css?555">
     </head>
 
     <body>
         <div class="countdown left"></div>
-        <div class="countdown right"></div>
         <div class="container">
+            <div class="countdown right"></div>
             <div class="bg-wrapper">
                 <div>
                     <div class="logo"></div>
@@ -29,7 +29,7 @@
                 <div class="story-wrapper">
                     <div id="story"></div>
                     <div class="other-story">
-                        <a href="/">Другая запись</a>
+                        <a href="/" class="btn white">Другая запись</a>
                     </div>
                 </div>
             </div>
@@ -39,10 +39,25 @@
                 <div class="story-desc">
                     <span>Quester.</span> Их судьба зависит от тебя. Твой ход.
                 </div>
+                <div class="choose-country">
+                    <div class="btn white russia">Я из России</div>
+                    <div class="btn white not-russia">Я не из России</div>
+                </div>
+                <div class="phone">
+                    <div class="seven">+7</div>
+                    <input type="text" id="phone" placeholder="Ввести телефон" maxlength="15" />
+                    <a href="#" class="submit" data-key="phone">Уведомить о выходе</a>
+                    <a href="#" class="btn submit-mobile" data-key="phone">
+                        <span>Уведомить о выходе</span>
+                    </a>
+                    <div class="phone-finish">
+                        Жди своего хода.
+                    </div>
+                </div>
                 <div class="email">
                     <input type="email" id="email" placeholder="Ввести почту" />
-                    <a href="#" class="submit">Уведомить о выходе</a>
-                    <a href="#" class="btn submit-mobile">
+                    <a href="#" class="submit" data-key="email">Уведомить о выходе</a>
+                    <a href="#" class="btn submit-mobile" data-key="email">
                         <span>Уведомить о выходе</span>
                     </a>
                     <div class="email-finish">
@@ -64,6 +79,6 @@
         </div>
 
         <script src="./js/libs/jquery.min.js"></script>
-        <script src="./js/main.js?23"></script>
+        <script src="./js/main.js?555"></script>
     </body>
 </html>
