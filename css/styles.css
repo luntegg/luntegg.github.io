@@ -122,7 +122,9 @@ input, .btn {
     box-shadow: 0 6px 12px 0 rgba(0,0,0,0.50);
     display: inline-block;
     outline: 0;
+}
 
+input, .btn, .logo {
     -webkit-transform: perspective(1px) translateZ(0);
     transform: perspective(1px) translateZ(0);
 
@@ -151,12 +153,12 @@ input, .btn {
     background: rgba(255, 255, 255, 0.15);
 }
 
-.btn:hover, .btn:focus {
+.btn:hover, .btn:focus, .logo:hover, .logo:focus {
     -webkit-transform: translateY(-1px);
     transform: translateY(-1px);
 }
 
-.btn:active {
+.btn:active, .logo:active {
     -webkit-transform: translateY(1px);
     transform: translateY(1px);
 }
