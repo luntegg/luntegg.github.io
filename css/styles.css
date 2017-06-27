@@ -147,6 +147,10 @@ input, .btn {
     text-align: center;
 }
 
+.btn.white:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
 .btn:hover, .btn:focus {
     -webkit-transform: translateY(-1px);
     transform: translateY(-1px);
