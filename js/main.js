@@ -232,13 +232,16 @@ $(function() {
 
         $(document).on('click', '.btn.not-russia', function() {
             $('.choose-country').fadeOut(function() {
-                $('.email').fadeIn();
+                $('.email').fadeIn(function () {
+                    $('#email').focus();
+                });
             });
         });
 
         $(document).on('click', '.btn.russia', function() {
             $('.choose-country').fadeOut(function() {
                 $('.phone').fadeIn(function() {
+                    $('#phone').focus();
                 });
             });
         });

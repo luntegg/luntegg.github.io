@@ -336,10 +336,6 @@ body {
     background-clip: padding-box;
 }
 
-.email input:hover, .email input:active, .email input:focus {
-    background: rgba(255, 255, 255, 0.14);
-}
-
 .email .submit, .phone .submit {
     color: #808063;
     font-size: 14px;
