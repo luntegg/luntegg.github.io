@@ -16,7 +16,7 @@ $(function() {
                 $('.bg-wrapper').animate({marginTop: '120px'}, 1200);
             }, 200);
         });
-    }, 500);
+    }, 600);
 
     var now = new Date();
     var isRelease = (location.search == '?release') || ((releaseDate - now) < 0);
