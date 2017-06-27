@@ -118,7 +118,7 @@ input {
     outline: 0;
 }
 
-.btn {
+input, .btn {
     box-shadow: 0 6px 12px 0 rgba(0,0,0,0.50);
     display: inline-block;
     outline: 0;
@@ -197,10 +197,27 @@ body {
 
 @media (-webkit-min-device-pixel-ratio: 2) {
     body {
-        /*background: url(../img/grain@2x.png), -webkit-gradient(linear, left top, left bottom, from(#353531), to(#0A0A0A)) fixed;*/
         background: center url(../img/bg@2x.jpg);
         background-attachment: fixed;
         background-size: cover;
+    }
+
+    .bg-wrapper {
+        background: center url(../img/bg/story-bg@2x.png);
+    }
+
+    .container {
+        background: center url(../img/bg/story-bg@2x.png);
+    }
+}
+
+@media (-webkit-min-device-pixel-ratio: 3) {
+    .bg-wrapper {
+        background: center url(../img/bg/story-bg@3x.png);
+    }
+
+    .container {
+        background: center url(../img/bg/story-bg@3x.png);
     }
 }
 
@@ -284,6 +301,7 @@ body {
 
 .email-finish, .email .submit-mobile {
     background: #2f4f33;
+    box-shadow: 0 6px 12px 0 rgba(0,0,0,0.50);
     color: #ccccbc;
     display: none;
     height: 40px;
