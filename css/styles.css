@@ -153,12 +153,12 @@ input, .btn, .logo {
     background: rgba(255, 255, 255, 0.15);
 }
 
-.btn:hover, .btn:focus, .logo:hover, .logo:focus {
+a, .btn:hover, .btn:focus, .logo:hover, .logo:focus {
     -webkit-transform: translateY(-1px);
     transform: translateY(-1px);
 }
 
-.btn:active, .logo:active {
+a, .btn:active, .logo:active {
     -webkit-transform: translateY(1px);
     transform: translateY(1px);
 }
