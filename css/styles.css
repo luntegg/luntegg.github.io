@@ -589,10 +589,6 @@ body {
     .links a + a {
         margin-left: 10px;
     }
-
-    .story-desc {
-        font-size: 13px;
-    }
 }
 
 @media (min-width: 781px) {
