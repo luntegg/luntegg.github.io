@@ -1,4 +1,5 @@
 var releaseDate = new Date('07/01/2017 01:00 AM');
+    releaseDate = new Date('06/27/2017 07:19 PM');
 var stories = [1, 2, 3, 4, 5, 6, 7, 8];
 
 var _second = 1000;
@@ -8,7 +9,8 @@ var _day = _hour * 24;
 var timer;
 
 $(function() {
-    var isRelease = (location.search == '?release');
+    var now = new Date();
+    var isRelease = (location.search == '?release') || ((releaseDate - now) < 0);
 
     if (isRelease) {
         $('body').addClass('release-mode');
@@ -115,10 +117,8 @@ $(function() {
         var now = new Date();
         var distance = releaseDate - now;
         if (distance < 0) {
-            clearInterval(timer);
-            document.getElementById('countdown').innerHTML = 'EXPIRED!';
-
-            return;
+            $('.countdown').remove();
+            location.reload();
         }
         var days = Math.floor(distance / _day);
         var hours = Math.floor((distance % _day) / _hour);
@@ -143,5 +143,8 @@ $(function() {
     bindElements();
     hideExtraButtons();
     loadStory(storyNum);
-    startCountDown();
+
+    if (!isRelease) {
+        startCountDown();
+    }
 });
