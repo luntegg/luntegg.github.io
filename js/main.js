@@ -8,6 +8,12 @@ var _day = _hour * 24;
 var timer;
 
 $(function() {
+    setTimeout(function() {
+        $('.loading').fadeOut(function () {
+            $('.content').fadeIn(800);
+        });
+    }, 500);
+
     var now = new Date();
     var isRelease = (location.search == '?release') || ((releaseDate - now) < 0);
 

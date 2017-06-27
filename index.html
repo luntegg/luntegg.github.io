@@ -5,80 +5,85 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Quester</title>
 
-        <link rel="stylesheet" href="css/styles.css?560">
+        <link rel="stylesheet" href="css/styles.css?28">
     </head>
 
     <body>
-        <div class="countdown left"></div>
-        <div class="container">
-            <div class="countdown right"></div>
-            <div class="bg-wrapper">
-                <div>
-                    <div class="logo"></div>
-                </div>
-                <div class="android-download">
-                    <a href="#">
-                        <img class="btn download" src="./img/google-play.svg" />
-                    </a>
-                </div>
-                <div class="ios-download">
-                    <a href="#">
-                        <img class="btn download" src="./img/app-store.svg" />
-                    </a>
+        <div class="loading">
+            <div class="text">Загрузка</div>
+        </div>
+        <div class="content">
+            <div class="countdown left"></div>
+            <div class="container">
+                <div class="countdown right"></div>
+                <div class="bg-wrapper">
+                    <div>
+                        <div class="logo"></div>
+                    </div>
+                    <div class="android-download">
+                        <a href="#">
+                            <img class="btn download" src="./img/google-play.svg" />
+                        </a>
+                    </div>
+                    <div class="ios-download">
+                        <a href="#">
+                            <img class="btn download" src="./img/app-store.svg" />
+                        </a>
+                    </div>
+                    <div class="story-wrapper">
+                        <div id="story"></div>
+                        <div class="other-story">
+                            <a href="/" class="btn white">Другая запись</a>
+                        </div>
+                    </div>
                 </div>
                 <div class="story-wrapper">
-                    <div id="story"></div>
-                    <div class="other-story">
-                        <a href="/" class="btn white">Другая запись</a>
+                    <div class="countdown mobile"></div>
+                    <hr>
+                    <div class="story-desc">
+                        <span>Quester.</span> Их судьба зависит от тебя. Твой ход.
                     </div>
-                </div>
-            </div>
-            <div class="story-wrapper">
-                <div class="countdown mobile"></div>
-                <hr>
-                <div class="story-desc">
-                    <span>Quester.</span> Их судьба зависит от тебя. Твой ход.
-                </div>
-                <div class="choose-country">
-                    <div class="btn white russia">Я из России</div>
-                    <div class="btn white not-russia">Я не из России</div>
-                </div>
-                <div class="phone">
-                    <div class="seven">+7</div>
-                    <input type="text" id="phone" placeholder="Ввести телефон" maxlength="15" />
-                    <a href="#" class="submit" data-key="phone">Уведомить о выходе</a>
-                    <a href="#" class="btn submit-mobile" data-key="phone">
-                        <span>Уведомить о выходе</span>
-                    </a>
-                    <div class="phone-finish">
-                        Жди своего хода.
+                    <div class="choose-country">
+                        <div class="btn white russia">Я из России</div>
+                        <div class="btn white not-russia">Я не из России</div>
                     </div>
-                </div>
-                <div class="email">
-                    <input type="email" id="email" placeholder="Ввести почту" />
-                    <a href="#" class="submit" data-key="email">Уведомить о выходе</a>
-                    <a href="#" class="btn submit-mobile" data-key="email">
-                        <span>Уведомить о выходе</span>
-                    </a>
-                    <div class="email-finish">
-                        Жди своего хода.
+                    <div class="phone">
+                        <div class="seven">+7</div>
+                        <input type="text" id="phone" placeholder="Ввести телефон" maxlength="15" />
+                        <a href="#" class="submit" data-key="phone">Уведомить о выходе</a>
+                        <a href="#" class="btn submit-mobile" data-key="phone">
+                            <span>Уведомить о выходе</span>
+                        </a>
+                        <div class="phone-finish">
+                            Жди своего хода.
+                        </div>
                     </div>
-                </div>
-                <div class="links">
-                    <a href="#">
-                        <img src="./img/app-store.svg" class="btn download" />
-                    </a>
-                    <a href="#">
-                        <img src="./img/google-play.svg" class="btn download" />
-                    </a>
-                </div>
-                <div class="company-desc">
-                    От создателей <a href="https://ideer.ru/">«Подслушано»</a>. © Все права защищены. 2017.
+                    <div class="email">
+                        <input type="email" id="email" placeholder="Ввести почту" />
+                        <a href="#" class="submit" data-key="email">Уведомить о выходе</a>
+                        <a href="#" class="btn submit-mobile" data-key="email">
+                            <span>Уведомить о выходе</span>
+                        </a>
+                        <div class="email-finish">
+                            Жди своего хода.
+                        </div>
+                    </div>
+                    <div class="links">
+                        <a href="#">
+                            <img src="./img/app-store.svg" class="btn download" />
+                        </a>
+                        <a href="#">
+                            <img src="./img/google-play.svg" class="btn download" />
+                        </a>
+                    </div>
+                    <div class="company-desc">
+                        От создателей <a href="https://ideer.ru/">«Подслушано»</a>. © Все права защищены. 2017.
+                    </div>
                 </div>
             </div>
         </div>
 
         <script src="./js/libs/jquery.min.js"></script>
-        <script src="./js/main.js?555"></script>
+        <script src="./js/main.js?28"></script>
     </body>
 </html>

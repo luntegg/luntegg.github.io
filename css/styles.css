@@ -223,6 +223,10 @@ body {
     transition-delay: 0.3s;
 }
 
+.content {
+    display: none;
+}
+
 @media (-webkit-min-device-pixel-ratio: 2) {
     body {
         background: center url(../img/bg@2x.jpg);
@@ -377,6 +381,32 @@ body {
 
 .ios-download, .android-download {
     display: none;
+}
+
+.loading {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.loading .text {
+    color: #808063;
+    font-size: 14px;
+    line-height: 14px;
+    position: absolute;
+    left: 50%;
+    margin-left: -35px;
+    margin-top: -10%;
+    text-decoration: none;
+    text-transform: uppercase;
+    top: 50%;
+}
+
+.loading .text:after {
+    content: '.';
+    animation: dots 1s steps(5, end) infinite;
 }
 
 .logo {
