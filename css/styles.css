@@ -629,7 +629,7 @@ body {
     }
 }
 
-.release-mode .email, .release-mode .phone, .release-mode .countdown {
+.release-mode .email, .release-mode .phone, .release-mode .countdown, .release-mode .choose-country {
     display: none !important;
 }
 
