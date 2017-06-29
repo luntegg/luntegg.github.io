@@ -25,6 +25,7 @@ $(function() {
         $('.countdown').remove();
     } else {
         $('body').addClass('timer-mode');
+        $('.story-desc .tip').text('Их судьба зависит от тебя. Не пропусти свой ход.');
     }
 
     var hideExtraButtons = function () {
