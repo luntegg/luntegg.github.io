@@ -1,5 +1,4 @@
 var releaseDate = new Date('07/01/2017 01:00 AM');
-var stories = [1, 2, 3, 4, 5, 6, 7, 8];
 
 var _second = 1000;
 var _minute = _second * 60;
@@ -49,9 +48,9 @@ $(function() {
         }, 'text');
     };
 
-    var getRandomFromArray = function () {
-        return stories[Math.floor(Math.random() * stories.length)];
-    };
+    // var getRandomFromArray = function () {
+    //     return stories[Math.floor(Math.random() * stories.length)];
+    // };
 
     var saveEmail = function (email, callback) {
         $.post('api/', {
@@ -247,12 +246,17 @@ $(function() {
     };
 
     var getStoryNum = function() {
+        //var stories = [1, 2, 3, 4, 5, 6, 7, 8];
         var currentNum = localStorage.getItem('storyNum');
 
         if (!currentNum) {
             currentNum = 1;
         } else {
             currentNum++;
+        }
+
+        if (currentNum > 8) {
+            currentNum = 1;
         }
 
         localStorage.setItem('storyNum', currentNum);
