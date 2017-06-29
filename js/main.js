@@ -195,10 +195,27 @@ $(function() {
         });
 
         $(document).on('click', '.btn.russia', function() {
-            $('.choose-country').fadeOut(function() {
-                $('.phone').fadeIn(function() {
-                    $('#phone').focus();
-                });
+            var country = $(this).parent('.country');
+
+            country.fadeOut(function() {
+                country.siblings('.type').fadeIn();
+            });
+        });
+
+        $(document).on('click', '.choose-country .type .btn', function() {
+            var block = $(this).parents('.choose-country');
+            var key = $(this).data('key');
+
+            block.fadeOut(function() {
+                if (key == 'phone') {
+                    $('.phone').fadeIn(function () {
+                        $('#phone').focus();
+                    });
+                } else {
+                    $('.email').fadeIn(function () {
+                        $('#email').focus();
+                    });
+                }
             });
         });
     };

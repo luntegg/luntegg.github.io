@@ -211,6 +211,10 @@ body {
     float: right;
 }
 
+.choose-country .type {
+    display: none;
+}
+
 .container {
     background: center url(../img/bg/story-bg.png);
     background-attachment: fixed;
