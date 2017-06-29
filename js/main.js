@@ -246,7 +246,21 @@ $(function() {
         timer = setInterval(showRemaining, 1000);
     };
 
-    var storyNum = getRandomFromArray();
+    var getStoryNum = function() {
+        var currentNum = localStorage.getItem('storyNum');
+
+        if (!currentNum) {
+            currentNum = 1;
+        } else {
+            currentNum++;
+        }
+
+        localStorage.setItem('storyNum', currentNum);
+
+        return currentNum;
+    };
+
+    var storyNum = getStoryNum();
 
     bindElements();
     hideExtraButtons();
