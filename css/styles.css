@@ -141,6 +141,7 @@ input, .btn, .logo {
 .btn.white {
     background: rgba(255, 255, 255, 0.1);
     cursor: pointer;
+    font-size: 14px;
     height: 40px;
     line-height: 40px;
     padding: 0 15px;
